@@ -1,0 +1,301 @@
+[START_LOOP_news]
+<div align="center" style="text-align: center;font-size: 22px;background: #b4daff;"><font  size="+2">[[name]] - [[category]]</font></div>
+<table style="width: 100%; text-align: left;" border="0"
+ cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="background-color: rgb(255, 255, 255);"  >
+<tr>
+<td style="background-color: #ddebff"
+ align="center" >
+<div style="text-align: center;">תיאור ראשי -
+ [[added_by]]
+[IF_connected][IF_game_owner] <a href="index.php?lfupdate=yes&amp;content=add_news&amp;lfupdate_id=[[id]]&amp;fpage=index.php::content=info_-_where2_news=id_-_equal_news=[[id]]_-_loops_news=1">[עריכה]</a> [END_IF_game_owner] [END_IF_connected][IF_connected][IF_oper] <a href="index.php?lfupdate=yes&amp;content=add_news&amp;lfupdate_id=[[id]]&amp;fpage=index.php::content=info_-_where2_news=id_-_equal_news=[[id]]_-_loops_news=1">[עריכה]</a> [END_IF_oper] [END_IF_connected]<br></div>
+<table style="width: 100%; text-align: left;" border="0"
+ cellpadding="2" cellspacing="5" align="center">
+<tbody>
+<tr>
+<td style="background-color: rgb(255, 255, 255);padding-left:40px; padding-right:40px; padding-top:10px; padding-bottom:10px;">
+	<div style="text-align: right;font-size: 14px"><img alt="" src='[[pic_loc]]' style="border: 15px solid white ; width: 145px; height: 120px;" align="right">[[desc]]</div>
+<br />
+<div style="text-align: right">[IF_forums_part]<a href="index.php?content=news_message&amp;where2_news=id&amp;equal_news=[[id]]">הדיון בפורום</a> | [END_IF_forums_part]<a href="[[home]]">אתר הבית</a> | <a href="[[link_pics]]">תמונות מסך</a> | <a href="[[link_log]]">לוגים</a> | <a href="[[link_fans]]">אחר</a></div>
+
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="background-color: #ddebff"
+  >
+
+
+<table style="width: 100%; text-align: left;" border="0"
+ cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="background-color: rgb(255, 255, 255); padding-left:5px; padding-right:5px; padding-top:10px; padding-bottom:10px;"   >
+[IF_shop_part]
+<!-- START_LOOP_products -->
+<div align="center" style="background: #b4daff;"><font  size="+2">תמונות מסך</font></div>
+<div align="left">[IF_connected] <a class="mlink"  href="index.php?content=add_screenshot&amp;top_category=[GET_equal_news]&amp;table=games&amp;fpage=index.php::orderby_news=name_-_where2_news=id_-_content=info_-_equal_news=[GET_equal_news]" >[הוסף תמונת מסך]</a>[END_IF_connected]</div>
+<table width="100%" border="0">
+<tr>
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[1]
+	<a style="font-size: 18px" class="wlink" href="index.php?content=screenshot&equal_product=[products_id[1]]">
+	<img border="0" src='[products_image[1]]' alt="" height="100" width="120" /><br />
+
+[products_name[1]]</a>
+	products_image[1] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[2] 	<a class="wlink" style="; text-decoration: none; font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[2]]">
+	<img border="0" src='[products_image[2]]' alt="" height="100" width="120" /><br />
+	 [products_name[2]]</a> products_name[2] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[3] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[3]]">
+	<img border="0" src='[products_image[3]]' alt="" height="100" width="120" /><br />
+[products_name[3]]</a> products_image[3] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[4] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[4]]">
+	<img border="0" src='[products_image[4]]' alt="" height="100" width="120" /><br />
+[products_name[4]]</a> products_image[4] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[5] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[5]]">
+	<img border="0" src='[products_image[5]]' alt="" height="100" width="120" /><br />
+[products_name[5]]</a> products_image[5] --></td>
+
+</tr>
+<tr>
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[6] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[6]]">
+	<img border="0" src='[products_image[6]]' alt="" height="100" width="120" /><br />
+[products_name[6]]</a> products_image[6] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[7] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[7]]">
+	<img border="0" src='[products_image[7]]' alt="" height="100" width="120" /><br />
+[products_name[7]]</a> products_image[7] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[8] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[8]]">
+	<img border="0" src='[products_image[8]]' alt="" height="100" width="120" /><br />
+[products_name[8]]</a> products_image[8] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[9] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[9]]">
+	<img border="0" src='[products_image[9]]' alt="" height="100" width="120" /><br />
+[products_name[9]]</a> products_image[9] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[10] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[10]]">
+	<img border="0" src='[products_image[10]]' alt="" height="100" width="120" /><br />[products_name[10]]</a> products_image[10] --></td>
+
+</tr>
+<tr>
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[11] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[11]]">
+	<img border="0" src='[products_image[11]]' alt="" height="100" width="120" /><br />
+[products_name[11]]</a> products_image[11] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[12] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[12]]">
+	<img border="0" src='[products_image[12]]' alt="" height="100" width="120" /><br />
+[products_name[12]]</a> products_image[12] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[13] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[13]]">
+	<img border="0" src='[products_image[13]]' alt="" height="100" width="120" /><br />
+[products_name[13]]</a> products_image[13] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[14] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[14]]">
+	<img border="0" src='[products_image[14]]' alt="" height="100" width="120" /><br />
+[products_name[14]]</a> products_image[14] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[15] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[15]]">
+	<img border="0" src='[products_image[15]]' alt="" height="100" width="120" /><br />
+[products_name[15]]</a> products_image[15] --></td>
+
+</tr>
+<tr>
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[16] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[16]]">
+	<img border="0" src='[products_image[16]]' alt="" height="100" width="120" /><br />
+[products_name[16]]</a> products_image[16] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[17] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[17]]">
+	<img border="0" src='[products_image[17]]' alt="" height="100" width="120" /><br />
+[products_name[17]]</a>  products_image[17] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[18] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[18]]">
+	<img border="0" src='[products_image[18]]' alt="" height="100" width="120" /><br />
+[products_name[18]]</a>  products_image[18] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[19] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[19]]">
+	<img border="0" src='[products_image[19]]' alt="" height="100" width="120" /><br />
+[products_name[19]]</a>  products_image[19] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[20] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[20]]">
+	<img border="0" src='[products_image[20]]' alt="" height="100" width="120" /><br />
+[products_name[20]]</a>  products_image[20] --></td>
+
+</tr>
+<tr>
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[21] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[21]]">
+	<img border="0" src='[products_image[21]]' alt="" height="100" width="120" /><br />
+[products_name[21]]</a>  products_image[21] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[22] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[22]]">
+	<img border="0" src='[products_image[22]]' alt="" height="100" width="120" /><br />
+[products_name[22]]</a>  products_image[22] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[23] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[23]]">
+	<img border="0" src='[products_image[23]]' alt="" height="100" width="120" /><br />
+[products_name[23]]</a>  products_image[23] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[24] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[24]]">
+	<img border="0" src='[products_image[24]]' alt="" height="100" width="120" /><br />
+[products_name[24]]</a>  products_image[24] --></td>
+
+	<td width="20%" align="center" style="vertical-align: top"  ><!-- products_image[25] 	<a class="wlink" style="font-size: 18px" href="index.php?content=screenshot&equal_product=[products_id[25]]">
+	<img border="0" src='[products_image[25]]' alt="" height="100" width="120" /><br />
+[products_name[25]]</a>  products_image[25] --></td>
+
+</tr>
+</table>
+<!-- END_LOOP_products -->
+[END_IF_shop_part]
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="background-color: #ddebff"
+
+  >
+<div style="text-align: center;">תיאור פתוח<br>
+</div>
+<table style="width: 100%; text-align: center;" border="0"
+ cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="background-color: rgb(255, 255, 255); padding-left:40px; padding-right:40px; padding-top:10px; padding-bottom:10px;"
+  >
+ <div style="text-align: right;">
+ <br></div><div style="text-align: center;">
+<br> 
+[[free_desc]]
+
+ </div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="background-color: #ddebff">
+<a alt="comments"></a>
+[IF_forums_part]<div style="text-align: center;">תגובות:<br>
+</div>[END_IF_forums_part]
+<table style="width: 100%; text-align: left;" border="0"
+ cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="background-color: rgb(255, 255, 255);"
+  >
+<!-- <div style="text-align: right;">[[other_desc]]</div>-->
+</td>
+</tr>
+</tbody>
+</table>
+<table style="text-align: left; width: 100%;" border="0"
+ cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="background-color: rgb(255, 255, 255);" >
+[IF_forums_part]
+ <div style="text-align: center;padding-left: 40px; padding-right: 40px;">
+[START_LOOP_comments_news]
+<div style="border-style: solid; border-width: 1px;border-top-width:1px;">
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+	<tr style="background: #f1f1f1;">
+		<td  width="80" align="center" >
+<!--		<img src="parts/forums/images/forumsd.gif" style="vertical-align: middle" alt=""/>-->[[by]]:
+		</td>
+		<td> [[name]]</td>
+		<td  width="80" align="center">
+		</td>
+		<td  width="80" align="center">
+		[[time]]
+		</td>
+		<td  width="80" align="center">
+		[[date]]
+		</td>
+	</tr>
+</table>
+<table width="100%" border="0">
+<tr>
+<td><div style="padding-right: 35px; padding-left: 35px;padding-top: 15px;padding-bottom: 15px;">[[comment]]</div></td> 
+<td width="128">
+</td>
+</tr>
+</table>
+<div style="padding-right: 5px; padding-left: 5px;padding-top: 5px;padding-bottom: 5px;">
+
+<div style="text-align: left;"><a href="index.php?lfupdate=yes&amp;content=add_comment&amp;lfupdate_id=[[id]]&amp;fpage=index.php::content=info_-_where2_news=id_-_equal_news=[GET_equal_news]">[IF_connected]<!-- [IF_[COOKIE_nickname]_[[by]]_own_comment] [עריכה] [END_IF_[COOKIE_nickname]_[[by]]_own_comment] -->[END_IF_connected]</a></div>
+</div>
+</div>
+[END_LOOP_comments_news]
+
+[IF_NOT_connected]
+<div style="color: red;">יש להתחבר לאתר בשביל להוסיף תגובות</div>
+[END_IF_NOT_connected]
+[IF_connected]
+<a href="index.php?table=games&amp;content=add_comment&amp;mid=[[id]]&amp;fpage=index.php::orderby_news=name_-_where2_news=id_-_content=info_-_equal_news=[[id]]">הוסף תגובה</a>
+[END_IF_connected]
+
+</div>
+[END_IF_forums_part]
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="background-color: #ddebff"
+  >
+<div style="text-align: center;">
+<br>
+</div>
+<table
+ style="width: 100%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="background-color: rgb(255, 255, 255);"
+  >
+ <div style="text-align: center;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="background-color: #ddebff">
+<div style="text-align: center;"><br>
+</div>
+<table
+ style="width: 100%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="background-color: rgb(255, 255, 255);"
+  >
+ <div style="text-align: center;">
+ <form action="../add/download.php" method="post" id="add_download">
+ </form>
+ </div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+[END_LOOP_news]

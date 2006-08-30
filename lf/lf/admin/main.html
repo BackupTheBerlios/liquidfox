@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>ארזים</title>
+<style type="text/css">
+.menu {
+	width: 150px;
+	border-style: solid;
+	border-right-width: 1px;
+	border-left-width: 0px;
+	border-top-width: 0px;
+	border-bottom-width: 1px;
+	border-color: #529dee;
+	background: white;
+	position: absolute;
+	left: 0px;
+	top: 30px;
+	text-align: center;
+}
+.submenu {
+	background: #dbe9ff;
+	color: black;
+	font-size: 12px;
+	text-align: center;
+	font-weight: bold;
+}
+.content {
+	text-align: center;
+	padding-left:150px;
+	padding-right:150px;
+}
+.header {
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
+	color: white;
+	background: #529dee;
+	height: 30px;
+}
+
+a {
+	color: blue;
+	text-decoration: none;
+}
+a:hover {
+	color: red;
+	border: 0px;
+}
+
+.mlink {
+	color: blue;
+	text-decoration: none;
+	font-size: 16px;
+	background: white;
+}
+.mlink:hover {
+	color: red;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+
+</style>
+</head>
+<body style="font-family: arial; color: rgb(0, 0, 0);   direction: rtl;margin-top:0px; margin-right:0px; margin-left: 0px;background: white;" alink="#3333ff" link="#3333ff" vlink="#3333ff">
+	<div class="header"><b style="color: red">L</b>iquid Fox Control Center</div>
+	<div style="position: absolute; right: 0px; top:0px; background: white; color: blue; font-weight: bold; font-size: 22px;font-family: fixed;direction: ltr;	"><br />
+   </div>
+<div class="content">
+[LF_CONTENT]
+</div>
+<div class="menu">
+	<div class="submenu">
+	Navigation
+	</div>
+	<a class="mlink" href="index.php?admin=yes">Main Page</a><br />
+	<a class="mlink" href="index.php?admin=yes&amp;content=selectheme">Change Theme</a><br />
+[IF_connected]
+[IF_oper]
+	<a class="mlink" href="lfaction.php?action=delcookies">Log out</a><br />
+[END_IF_oper]
+[END_IF_connected]
+	<a class="mlink" href="index.php">Exit</a>
+</div>
+</body>
+</html>

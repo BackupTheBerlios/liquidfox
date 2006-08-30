@@ -1,0 +1,63 @@
+<div align=center>חיפוש מתקדם</div>
+<table border=0 >
+	<tr>
+		<form method="get" action="index.php" name="bychar">
+	<td width=5%> 	<!-- 1.1 -->
+			<input name="הראה רק משחקים מהקטגוריה" value="הצג רק משחקים מהקטגוריה" type="submit" style="width:100%">
+	</td>
+	<td>		<!-- 1.2 -->
+			<input type="hidden" name="content" value="games">
+			<input type="hidden" name="where_1" value="category">
+			<select name="like_1">
+				~SELECTCOL~category~games~section~games~category~
+			</select>
+		
+	</td>
+		</form>
+	</tr>
+	<tr>
+ 		<form method="get" action="index.php" name="bychar">
+	<td>		<!-- 2.1 -->
+			<input name="הראה רק משחקים שנוספו על ידי" value="הצג רק משחקים שנוספו על ידי" type="submit" >
+	</td>
+	<td>		<!-- 2.2 -->
+
+			<input type="hidden" name="content" value="games">
+			<input type="hidden" name="where_1" value="added_by">
+			<select name="like_1">
+				~SELECTCOL~added_by~games~section~games~added_by~
+			</select>
+	</td>
+		</form>
+	</tr>
+	<tr>
+ 		<form method="get" action="index.php" name="bychar">
+	<td>		<!-- 3.1 -->
+			<input name="הראה רק תוכנת מהקטגוריה" value="הצג רק תוכנות מהקטגוריה" type="submit" style="width:100%">
+	</td>
+	<td>		<!-- 3.2  -->
+			<input type="hidden" name="content" value="games">
+			<input type="hidden" name="where_1" value="category">
+			<select name="like_1">
+				~SELECTCOL~category~games~section~apps~category~
+			</select>
+	</td>
+		</form>
+	</tr>
+	<tr>
+ 		<form method="get" action="index.php" name="bychar">
+	<td>		<!-- 4.1 -->
+			<input name="הראה רק תוכנות שנוספו על ידי" value="הצג רק תוכנות שנוספו על ידי" type="submit" style="width:100%" >
+	</td>
+	<td>		<!-- 4.2  -->
+			<input type="hidden" name="content" value="games">
+			<input type="hidden" name="where_1" value="section">
+			<input type="hidden" name="like_1" value="apps">
+			<input type="hidden" name="where2_1" value="added_by">
+			<select name="like2_1">
+				~SELECTCOL~added_by~games~section~games~added_by~
+			</select>
+	</td>
+		</form>
+	</tr>
+</table>

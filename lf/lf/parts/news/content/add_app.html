@@ -1,0 +1,108 @@
+<form enctype="multipart/form-data" action="lfaction.php" method="post" id="artwork_form"
+ target="_self">
+<!-- [lfupdate] -->
+<input type="hidden" name="lfaction" value="add_app">
+
+	<div style="text-align: right;"> </div>
+	<table style="width: 100%; text-align: right;" border="0" cellpadding="2" cellspacing="2">
+		<tr>
+			<td>
+				        הערות:<br>
+				1. אי אפשר להעלות תמונות השוקלות יותר מ80k.<br>
+				2. נא לבדוק שהתוכנה לא במאגר לפני שמוסיפים .<br>
+			</td><td align=center width=1px>
+			<div>
+				<input value="הוספה" type="image" style="width:48px; height:48px; background: url(themes/linuxfun/images/save.png) ;" src="images/save.png"> </div>
+				שמירה
+			</td></tr>
+	</table>
+	<table style="width: 100%; text-align: right;" border="0" cellpadding="2" cellspacing="2">
+	<tbody>
+		<tr>
+		<td valign="top">
+		<br>
+		<table style="width: 100%; text-align: right; " border="0" cellpadding="2" cellspacing="2"  >
+			<tr>
+				<td width=100px valign=middle >
+					שם התוכנה:
+				</td><td>
+					<input name="name[POST]" style="width:100%" maxlenght="30" >
+				</td></tr>
+			<tr>
+				<td>
+					תמונה: 
+				</td><td>
+					<input enctype="multipart/form-data" name="pic_loc[POST]" type="file" style="width: 100%;">
+				</td></tr>
+			<tr>
+				<td>
+					        אתר בית: 
+				</td><td>
+					<input name="home[POST]" style="width: 100%;" maxlenght="45">
+				</td></tr>
+			<tr>
+				<td>
+					        * אתר נוסף: 
+				</td><td>
+					<input name="link_fans[POST]" style="width: 100%;" maxlenght="45">
+				</td></tr>
+			<tr>
+				<td>
+				        * אתר תמונות: 
+				</td><td>
+					<input name="link_pics[POST]" style="width: 100%;" maxlenght="45">
+				</td></tr>
+			<tr>
+				<td>
+					* אתר לוג: 
+				</td><td>
+					<input name="link_log[POST]"  style="width: 100%;" maxlenght="45">
+				</td></tr>
+			<tr>
+				<td>
+					        קטגוריה: 
+				</td><td>
+	        		<select name="category[POST]" style="width: 100%;">
+					<!-- [category_SELECTPOST] -->
+<!--        				<option>נא לבחור את סוג התוכנה</option>
+					~SELECTCOL~category~games~section~apps~category~
+					</select> -->
+				        <option>נא לבחור את סוג התוכנה</option>
+					<option>אופיס</option>
+					<option>אימולציה</option>
+					<option>בוטספלאש</option>
+					<option>בניית מוזיקה</option>
+					<option>גרפיקה</option>
+					<option>דפדפן</option>
+					<option>הרחבה למנהל החלונות</option>
+					<option>וידאו\מולטימדיה</option>
+					<option>כיווץ ופריסה</option>
+					<option>כלי למידה</option>
+					<option>מסרים מידיים</option>
+					<option>נגישות</option>
+					<option>עריכת קבצי וידאו</option>
+					<option>צ'אט</option>
+					<option>צריבה</option>
+					<option>עריכת קבצי שמע</option>
+					<option>רקע</option>
+					<option>שיתוף קבצים</option>
+					<option>שמע</option>
+					<option>תוסף לתוכנה</option>
+					<option>תקליטנות</option>
+					<option>אחר...</option>
+				</select>   
+	
+			
+					<br><br>
+				</td>
+			</tr>
+		</table>
+			
+		</td><td width="60%" valign=top >
+			תיאור:<br>     
+			<textarea name="desc" rows="10" style="width: 100%;"></textarea><!--[desc_TEXTPOST]--> <br><br>
+			</td>
+		</tr>
+	</table>
+
+</form>

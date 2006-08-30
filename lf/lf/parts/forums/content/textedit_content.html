@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>linuXfun</title>
+
+<style type="text/css">
+.b2r {
+	color: black;
+	text-decoration: none;
+	background: white;
+	
+}
+.b2r:hover {
+	background: #c6c9ff;
+}
+.buttonc {
+	border: 0px;
+	background: transparent;
+}
+
+.buttonc:hover {
+	background: #dae2f5;	
+	border: 1px solid black;
+}
+.stylebutton {
+	width: 75px; 
+	height: 16px;
+	font-size: 12px;
+	background: #aeaeae;
+	color: black;
+	border: solid 1px black;
+	border-bottom-width: 2px;
+	border-right-width: 2px;
+	vertical-align: middle;
+	margin-left: 2px;
+}
+
+.stylebutton:hover {
+	border-width: 1px;
+	margin-top: 2px;
+	margin-left: 2px;
+	color: black;
+	width: 75px;
+}
+
+.stylebuttoncell {
+	width: 77px;
+	font-size: 14px;
+	vertical-align: middle;
+	text-align: center;
+}
+.smiletd {
+	width:10px;
+	vertical-align: middle;
+}
+.texteditor {
+	width: 170px;
+	background: #616161;
+	color: 232323;
+	text-align: center; 
+	font-size: 18px;
+	border: 1px solid #8e8e8e; 
+	border-bottom-width: 0px;
+}
+
+.texteditor:hover {
+	width: 170px;
+	background: white;
+	color: 232323;
+	text-align: center; 
+	font-size: 18px;
+	border: 1px solid #8e8e8e; 
+	border-bottom-width: 0px;
+}
+</style>
+<body style="direction: rtl">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td style="vertical-align: bottom">
+<div style="color: white;border: 0px solid #8e8e8e; border-bottom-width: 1px;">-</div>
+</td>
+<td width="170" style="width: 170px">
+[IF_NOT_textedit]<div class="texteditor"><a style="color: black; text-decoration: none;" href="index.php?content=textedit_content&amp;nomain=yes&amp;textedit=yes">עורך המלל</a></div>[END_IF_NOT_textedit][IF_textedit]<div style="width: 170px;background: #e8e8e8;text-align: center; font-size: 18px;border: 1px solid #8e8e8e; border-bottom-width: 0px;">עורך המלל</div>[END_IF_textedit]
+</td>
+<td width="170" style="width: 170px">
+[IF_NOT_textedit]<div style="width: 170px;background: #e8e8e8;text-align: center; font-size: 18px;border: 1px solid #8e8e8e; border-bottom-width: 0px;">עורך האפקטים</div>[END_IF_NOT_textedit][IF_textedit]<div class="texteditor"><a style="color: black; text-decoration: none;" href="index.php?content=textedit_content&amp;nomain=yes">עורך האפקטים</a></div>[END_IF_textedit]
+</td>
+</table>
+
+
+<div style="background: #e8e8e8; padding-top: 5px;padding-bottom: 5px; border: 1px solid #8e8e8e;border-top-width: 0px;border-bottom-width: 0px;">
+[IF_textedit]
+<div align="right" style="margin-bottom: 5px;margin-right: 10px; margin-left: 10px;padding-right: 5px; padding-left: 5px;font-weight: bold; background: #414141; color: white;">שימו לב! יש לשמור לאחר כל עריכה, אחרת השינויים לא ייקלטו במערכת.</div>
+<div style="height:25px;padding-right: 10px; padding-left: 10px;">
+
+<table cellpadding="0" cellspacing="0" width="100%"><tr>
+<td class="stylebuttoncell">
+<form method="get" action="index.php" target="_self">
+<input type="hidden" name="content" value="textedit_content" />
+<input type="hidden" name="nomain" value="yes" />
+<input type="hidden" name="textedit" value='yes' />
+<input type="hidden" name="operation" value='load_original' />
+<button name="name" class="stylebutton" style="font-weight: bold;">טען מקור</button>
+</form>
+</td>
+
+<td class="stylebuttoncell">
+<form method="get" action="index.php" target="_self">
+<input type="hidden" name="content" value="textedit_content" />
+<input type="hidden" name="nomain" value="yes" />
+<input type="hidden" name="textedit" value='yes' />
+<input type="hidden" name="operation" value='zero' />
+<button name="name" class="stylebutton" style="font-weight: bold;">אפס</button>
+</form>
+</td>
+
+<td width="100%">_</td>
+</table>
+</div>
+[END_IF_textedit]
+[IF_NOT_textedit]
+<div align="right" style="margin-bottom: 5px;margin-right: 5px; margin-left: 5px;padding-right: 5px; padding-left: 5px;font-weight: bold; background: #414141; color: white;">[IF_editlevel1]1. בחר את האקפט שברצונך להחיל על הטקטס[END_IF_editlevel1][IF_editlevel2]2. בחר מאיזו מילה יתחיל אפקט [GET_action_name][END_IF_editlevel2][IF_editlevel3]3. בחר באיזו מילה יסתיים אפקט [GET_action_name][END_IF_editlevel3]</div>
+<div style="height:25px;padding-right: 5px; padding-left: 5px;">
+<table cellpadding="0" cellspacing="0" width="100%"><tr>
+<td class="stylebuttoncell">
+<form method="get" action="index.php" target="_self">
+<input type="hidden" name="content" value="textedit_content" />
+<input type="hidden" name="nomain" value="yes" />
+
+<input type="hidden" name="opentag" value='^הדגש__' />
+<input type="hidden" name="closetag" value='__הדגש^' />
+<input type="hidden" name="edit_level" value='2' />
+<input type="hidden" name="action_name" value='הדגשת טקסט' />
+<button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3]  name="name" class="stylebutton" style="font-weight: bold;">מודגש</button>
+</form>
+</td>
+<td class="stylebuttoncell">
+<form method="get" action="index.php" target="_self">
+<input type="hidden" name="content" value="textedit_content" />
+<input type="hidden" name="nomain" value="yes" />
+
+<input type="hidden" name="opentag" value='^קוקו__' />
+<input type="hidden" name="closetag" value='__קוקו^' />
+<input type="hidden" name="edit_level" value='2' />
+<input type="hidden" name="action_name" value='הוספת קו תחתון' />
+<button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="stylebutton" name="name" style="text-decoration: underline;" >קו תחתון</button>
+</form>
+</td>
+
+<td class="stylebuttoncell">
+<form method="get" action="index.php" target="_self">
+<input type="hidden" name="content" value="textedit_content" />
+<input type="hidden" name="nomain" value="yes" />
+
+<input type="hidden" name="opentag" value='^קוחוצה__' />
+<input type="hidden" name="closetag" value='__קוחוצה^' />
+<input type="hidden" name="edit_level" value='2' />
+<input type="hidden" name="action_name" value='הוספת קו חוצה' />
+<button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3]  name="name"  class="stylebutton" style="text-decoration:  line-through;">קו חוצה</button>
+</form>
+</td>
+
+<td class="stylebuttoncell">
+<form method="get" action="index.php" target="_self">
+<input type="hidden" name="content" value="textedit_content" />
+<input type="hidden" name="nomain" value="yes" />
+
+<input type="hidden" name="opentag" value='^קועליון__' />
+<input type="hidden" name="closetag" value='__קועליון^' />
+<input type="hidden" name="edit_level" value='2' />
+<input type="hidden" name="action_name" value='הוספת קו עליון' />
+<button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3]  class="stylebutton"  name="name" style="text-decoration:  overline;" >קו עליון</button>
+</form>
+</td>
+
+<td class="stylebuttoncell">
+<form method="get" action="index.php" target="_self">
+<input type="hidden" name="content" value="textedit_content" />
+<input type="hidden" name="nomain" value="yes" />
+
+<input type="hidden" name="opentag" value='^קונטוי__' />
+<input type="hidden" name="closetag" value='__קונטוי^' />
+<input type="hidden" name="edit_level" value='2' />
+<input type="hidden" name="action_name" value='הוספת נטייה' />
+<button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3]  class="stylebutton"  name="name" style="font-style: italic;">כתב נטוי</button>
+</form>
+</td>
+<td style="width: 5px;"></td>
+<td style="width:250px;vertical-align: middle;">
+<form method="get" action="index.php" target="_self">
+<input type="hidden" name="content" value="textedit_content" />
+<input type="hidden" name="nomain" value="yes" />
+
+<input type="hidden" name="action_name" value='שינוי גופן' />
+
+
+<input type="hidden" name="closetag" value='__font^' />
+<input type="hidden" name="edit_level" value='2' />
+
+<select class="stylebutton" style="height: 16px;direction: ltr;width:140px;text-align: center;" name="opentag">
+<option style="font-family: monospace;" value="^font_monospace__">Mono - מונו</option>
+<option style="font-family: Helvetica,Arial,sans-serif;" value="^font_arial__">Arial - אריאל</option>
+<option style="font-family: Times New Roman,Times,serif;" value="^font_times__">Times - טיימס</option>
+<option style="font-family: Courier New,Courier,monospace" value="^font_courier__">Courier - קורייר</option>
+</select> <input type="hidden" name="action_name" value='שינוי גופן' />
+
+<button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3]  class="stylebutton"  style="text-align: center;" name="name" >שנה גופן</button>
+</form>
+</td>
+<td style="color:transparent;background: transparent;">_</td>
+</tr>
+</table>
+</div>
+<div style="height:20px;">
+<!--
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+	<td class="smiletd">
+<form method="get" action="index.php" target="_self">
+<input type="hidden" name="content" value="textedit_content" />
+<input type="hidden" name="nomain" value="yes" />
+
+<input type="hidden" name="action_name" value='הוספת סמיילי' />
+<input type="hidden" name="closetag" value='_חץ~DEL~_' />
+<input type="hidden" name="edit_level" value='3' />
+<input type="hidden" name="nostart" value='yes' />
+		<button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_arrow.gif" alt="" /></button>
+</form>
+	</td>
+
+<td class="smiletd">
+<form method="get" action="index.php" target="_self">
+<input type="hidden" name="content" value="textedit_content" />
+<input type="hidden" name="nomain" value="yes" />
+
+<input type="hidden" name="action_name" value='הוספת סמיילי' />
+<input type="hidden" name="closetag" value='_חייכן~DEL~_' />
+<input type="hidden" name="edit_level" value='3' />
+<input type="hidden" name="nostart" value='yes' />
+<button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_biggrin.gif" alt="" /></button></form></td>
+<td class="smiletd"><form method="get" action="index.php" target="_self">
+<input type="hidden" name="content" value="textedit_content" />
+<input type="hidden" name="nomain" value="yes" />
+
+<input type="hidden" name="action_name" value='הוספת סמיילי' />
+<input type="hidden" name="closetag" value='_מבולבל~DEL~_' />
+<input type="hidden" name="edit_level" value='3' />
+<input type="hidden" name="nostart" value='yes' />
+<button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_confused.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_cool.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_cry.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_eek.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_evil.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_exclaim.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_frown.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_idea.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_lol.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_mad.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_mrgreen.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_neutral.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_question.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_razz.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_redface.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_rolleyes.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_sad.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_smile.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_surprised.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_twisted.gif" alt="" /></button></form></td>
+<td class="smiletd"><form action="index.php"><button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] class="buttonc" style="width: 25px;text-align: center"><img src="parts/forums/images/smiles/icon_wink.gif" alt="" /></button></form></td>
+<td width="100%"></td>
+</tr>
+</table>-->
+</div>
+[END_IF_NOT_textedit]
+</div>
+
+[IF_editlevel1]
+<!--
+<form method="get" action="index.php" target="_self">
+<input type="hidden" name="content" value="textedit_content" />
+<input type="hidden" name="nomain" value="yes" />
+<input type="hidden" name="textarea" value='[GET_textarea]' />
+<input type="hidden" name="opentag" value='[_-_]' />
+<input type="hidden" name="closetag" value='[ ]' />
+<input type="hidden" name="edit_level" value='2' />
+<input type="hidden" name="action_name" value='הדגשה' />
+<button [IF_editlevel2]disabled="disabled"[END_IF_editlevel2] [IF_editlevel3]disabled="disabled"[END_IF_editlevel3] name="name" class="stylebutton">הדגשה' />
+</form>-->
+<!-- <a href="index.php?&amp;=&amp;=&amp;=&amp;=&amp;=2&amp;=צביעה%20באדום">באדום</a>-->
+<div style="background: #e8e8e8; padding-top: 5px;padding-bottom: 5px; border: 1px solid #8e8e8e;border-top-width: 0px;">
+<div style="text-align: center;font-size: 14px; font-weight: bold;">[GET_action_name]</div>
+[IF_NOT_textedit]
+<div style="overflow: auto; height: 350px;margin-right: 5px; margin-left: 5px;padding-right: 5px; padding-left: 5px;background: white;border: 1px #8e8e8e solid">[GET_textarea]</div>
+[END_IF_NOT_textedit]
+[IF_textedit]
+<div align="center">
+<form method="get" action="index.php" target="_self">
+<textarea name="textarea_tosave" style="width: 98%;overflow: auto; height: 350px;margin-right: 5px; margin-left: 5px;padding-right: 5px; padding-left: 5px;background: white;border: 1px #8e8e8e solid">[GET_textarea_txt]</textarea>
+<input type="hidden" name="content" value="textedit_content" />
+<input type="hidden" name="nomain" value="yes" />
+<input type="hidden" name="textedit" value='yes' />
+<input type="hidden" name="operation" value='zero' />
+<div align="left" style="padding-left: 10px;padding-top:3px;"><button name="name" class="stylebutton" style="font-weight: bold;text-align: center;">שמירה</button></div>
+</form>
+</div>
+[END_IF_textedit]
+</div>
+</div>
+
+[END_IF_editlevel1]
+
+[IF_editlevel2]
+<div style="background: #e8e8e8; padding-top: 5px;padding-bottom: 5px; border: 1px solid #8e8e8e;border-top-width: 0px;">
+
+<div style="overflow: auto; height: 350px;margin-right: 5px; margin-left: 5px;padding-right: 5px; padding-left: 5px;background: white;border: 1px #8e8e8e solid">[GET_textarea]</div>
+
+</div>
+</div>
+[END_IF_editlevel2]
+
+[IF_editlevel3]
+
+
+<div style="background: #e8e8e8; padding-top: 5px;padding-bottom: 5px; border: 1px solid #8e8e8e;border-top-width: 0px;">
+<div style="overflow: auto; height: 350px;margin-right: 5px; margin-left: 5px;padding-right: 5px; padding-left: 5px;background: white;border: 1px #8e8e8e solid">[GET_textarea]</div>
+<div align="right" style="margin-top: 5px;margin-right: 5px; margin-left: 5px;padding-right: 5px; padding-left: 5px;font-weight: bold; background: #414141; color: white;">[IF_editlevel1]בחר אפקט להוסיף להוסיף לטקסט[END_IF_editlevel1][IF_editlevel2]בחר את המילה או האות הראשונה אשר ממנה יתחיל אקפט [GET_action_name][END_IF_editlevel2]</div>
+</div>
+</div>
+[END_IF_editlevel3]
+</div>
+</body>
+</html>

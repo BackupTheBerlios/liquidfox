@@ -1,0 +1,48 @@
+<div style="padding-left: 25px;padding-right: 25px;">
+<div align="center">
+<font  size="+2">חדשות</font>
+</div>
+<div align="center">חדשות [PAGECOUNT_news] [BACK_news] [NEXT_news]</div>
+<br />[START_LOOP_news]
+<div style="border-style: solid; border-top-width: 1px;border-right-width: 1px;border-left-width: 1px;border-bottom-width: 0px;border-color: #888888;">
+<table
+style="width: 100%; text-align: center;background-color: #e7e7e7;" border="0"
+cellpadding="0"  cellspacing="0">
+	<tr>
+		<td style="text-align: right; width: 38%;padding-right: 5px;"> על ידי <a  class="nlink" href="index.php?content=register&amp;lfupdate=yes&amp;lfupdate_id=~SELECT~id~users~nickname~[[added_by]]~id~">[[added_by]]</a></td>
+		<td style="width: 33%; text-align: center;" ><a class="nlink" href="index.php?content=info&amp;where2_news=id&amp;equal_news=[[id]]&amp;loops_news=1">[[name]]</a> - <a class="nlink" href="index.php?content=games&amp;where2_news=category&amp;like_news=[[category]]">[[category]]</a></td>
+		<td align="left"  style="padding-left: 5px;">[[add_date]]</td>
+	</tr>
+</table>
+</div>
+<div style="border-style: solid; border-top-width: 0px;border-right-width: 1px;border-left-width: 1px;border-bottom-width: 1px;border-color: #888888;">
+<table style="width: 100%; text-align: center;" border="0"
+cellpadding="0" cellspacing="5">
+<tbody>
+<tr>
+<td style="vertical-align: top; text-align: right; padding-left:5px; padding-right:5px;">
+<a href="index.php?content=info&amp;where2_news=id&amp;equal_news=[[id]]&amp;loops_news=1"><img
+style="float:left; width: 120px; height: 95px;padding-top:10px;" border="0" align="left" alt="" src='[[pic_loc]]' /></a>
+[IF_admin]
+<div style="text-align: left;">
+<a href="index.php?lfupdate=yes&amp;content=add_news&amp;lfupdate_id=[[id]]"><img src="images/edit.jpg" alt="Edit" style="border-width: 5px;border-color: white; border-style: solid;" /></a><a href="index.php?content=delete&amp;id=[[id]]"><img src="images/delete.jpg" alt="Delete" style="border-width: 5px;border-color: white; border-style: solid;" /></a>
+</div>
+[END_IF_admin]
+[[desc]]       <br>
+[[added_desc]] <br>
+[[free_desc]]  <br>
+</td>
+</tr>
+<tr>
+<td   ><br>
+</td>
+</tr>
+</tbody>
+</table>
+<div align="center"><b>תגובות:</b></div>
+<div align="right" >[[other_desc]] </div>
+<a href="index.php?content=add_comment&amp;id=[[id]]">[הוספת תגובה כאן]</a>
+</div>
+<br />
+[END_LOOP_news]
+</div>

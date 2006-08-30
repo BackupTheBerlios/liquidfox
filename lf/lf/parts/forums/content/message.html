@@ -1,0 +1,123 @@
+<table border="0" width="100%">
+<tr>
+	<td width="250" style="background: #f4f6ff;vertical-align: top;">
+<div style="font-size: 28px;text-align: center;">פורומים</div>
+<div align="center"><a style="font-size: 10px;" href="index.php?content=forums">חזרה לפורום ראשי</a></div>
+[IF_oper]
+אפשרויות ניהול:
+<a href="index.php?content=add_forum&amp;id=[GET_equal_forums]">הוספת פורום</a><br />
+[END_IF_oper]
+[START_LOOP_forums]
+<table border="1" cellpadding="3" cellspacing="0" width="99%" style="background: white;">
+	<tr>
+		<td>
+
+<div style="text-align: center;">[IF_oper]
+ניהול:
+<a href="index.php?content=add_forum&amp;id=[[id]]">הוספת תת פורום</a> | 
+<a href="index.php?lfupdate=yes&amp;content=add_forum&amp;lfupdate_id=[[id]]&amp;fpage=index.php::content=message_-_mid=[GET_mid]_-_id=[GET_id]_-_equal_forums=[GET_equal_forums]">עריכה</a> | <a href="lfaction.php?lfaction=forums|del_forum&amp;delete=[[id]]">מחיקה</a>
+[END_IF_oper]</div>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center" style="vertical-align: top">
+		<a href="index.php?content=forums&amp;equal_forums=[[id]]" ><img style="border:0px; vertical-align: middle;" src="[[image]]" alt="" width="100" height="80"/></a>
+	</td>
+	<td align="center" style="vertical-align: top">	 
+<a href="index.php?content=forums&amp;equal_forums=[[id]]" style="font-size: 32px;">[[name]]</a>
+<div style="font-size:12px;">בעל 
+~COUNTW~forums~sub_id~[[id]]~ תתי פורומים</div>
+	</td>
+</tr>
+</table>
+		[[desc]]
+		</td>	
+
+	</tr>
+</table>
+<br />
+[END_LOOP_forums]
+<!-- <table border="1" cellpadding="3" cellspacing="0" width="99%" style="background: white;">
+	<tr>
+		<td align="center">
+		<u style="font-size: 13px;">סטטיסטיקות</u><br />
+		<div style="font-size: 14px">
+		~COUNT~forums~ פורומים פעילים, 
+		~COUNTWN~forums~sub_id~0~ מתוכם תתי פורומים<br />
+		~ COUNT~users~ משתמשים רשומים<br />
+		</div>
+		</td>
+	</tr>
+</table>-->
+	</td>
+	<td style="vertical-align:top;">
+	<div style="text-align: center;font-size: 44px;">צפייה בשרשור</div>
+<div align="left">[IF_connected]<a href="index.php?table=message&amp;content=add_comment&amp;mid=[GET_mid]&amp;fpage=index.php::content=message_-_mid=[GET_mid]_-_equal_forums=[GET_equal_forums]">הוסף תגובה</a> | [END_IF_connected]<a href="index.php?content=forums&amp;equal_forums=[GET_equal_forums]">חזרה לפורום</a></div>
+<div style="border-style: solid; border-width: 1px;">
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+	<tr style="background: #f7f7f7;">
+		<td  width="120" align="center">
+		כינוי
+		</td>
+		<td>כותרת ההודעה</td>
+		<td  width="120" align="center">
+		שעה
+		</td>
+		<td  width="120" align="center">
+		תאריך
+		</td>
+	</tr>
+
+	<tr style="background: #f1f1f1;">
+		<td  width="120" align="center">
+		~SELECT~by~messages~id~[GET_mid]~id~:
+		</td>
+		<td> ~SELECT~name~messages~id~[GET_mid]~id~</td>
+		<td  width="120" align="center">
+		~SELECT~time~messages~id~[GET_mid]~id~
+		</td>
+		<td  width="120" align="center">
+		~SELECT~date~messages~id~[GET_mid]~id~
+		</td>
+	</tr>
+</table>
+<div style="padding-right: 35px; padding-left: 35px;padding-top: 15px;padding-bottom: 15px;">
+[IF_msg_owner]<div style="text-align: left;"><a href="index.php?lfupdate=yes&amp;content=add_message&amp;lfupdate_id=~SELECT~id~messages~id~[GET_mid]~id~&amp;fpage=index.php::content=message_-_mid=[GET_mid]_-_id=[GET_id]_-_equal_forums=[GET_equal_forums]">[עריכה]</a></div>[END_IF_msg_owner]
+~SELECT~message~messages~id~[GET_mid]~id~
+</div>
+</div>
+[START_LOOP_comments]
+<div style="border-style: solid; border-width: 1px;border-top-width:0px;">
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+	<tr style="background: #f1f1f1;">
+		<td  width="120" align="center" >
+<!--		<img src="parts/forums/images/forumsd.gif" style="vertical-align: middle" alt=""/>-->[[by]]:
+		</td>
+		<td> [[name]]</td>
+		<td  width="120" align="center">
+		</td>
+		<td  width="120" align="center">
+		[[time]]
+		</td>
+		<td  width="120" align="center">
+		[[date]]
+		</td>
+	</tr>
+</table>
+<table width="100%" border="0">
+<tr>
+<td><div style="padding-right: 35px; padding-left: 35px;padding-top: 15px;padding-bottom: 15px;">[[comment]]</div></td> 
+<td width="128">
+</td>
+</tr>
+</table>
+<div style="padding-right: 5px; padding-left: 5px;padding-top: 5px;padding-bottom: 5px;">
+
+<div style="text-align: left;"><a href="index.php?lfupdate=yes&amp;content=add_comment&amp;lfupdate_id=[[id]]&amp;fpage=index.php::content=message_-_mid=[GET_mid]_-_id=[GET_id]_-_equal_forums=[GET_equal_forums]">[IF_connected]<!-- [IF_[COOKIE_nickname]_[[by]]_own_comment] [עריכה] [END_IF_[COOKIE_nickname]_[[by]]_own_comment] -->[END_IF_connected]</a></div>
+</div>
+</div>
+[END_LOOP_comments]
+</td>
+</tr>
+</table>
+<div align="left">[IF_connected]<a href="index.php?table=message&amp;content=add_comment&amp;mid=[GET_mid]&amp;fpage=index.php::content=message_-_mid=[GET_mid]_-_equal_forums=[GET_equal_forums]">הוסף תגובה</a> | [END_IF_connected]<a href="index.php?content=forums&amp;equal_forums=[GET_equal_forums]">חזרה לפורום</a></div>

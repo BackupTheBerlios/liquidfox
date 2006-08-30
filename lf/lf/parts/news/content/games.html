@@ -1,0 +1,68 @@
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+
+  <tbody>
+
+    <tr>
+
+      <td align="center" valign="top">
+      <div style="text-align: right;">
+<!-- <a href="index.php?content=find_game">חיפוש מתקדם</a>-->
+      </div>
+
+      </td>
+
+      <td align="center" valign="top"></td>
+
+      <td align="right" valign="top">תוצאות [PAGECOUNT_news] מתוך ~COUNTGET~games~</td>
+
+      <td align="center" valign="top"><div align=center>[BACK_news] [NEXT_news]</div></td>
+
+    </tr>
+  </tbody>
+</table>
+
+
+<table style="margin-left: auto; margin-right: 0px; width: 100%; text-align: left;" border="0" cellpadding="2" cellspacing="2">
+
+  <tbody style="background-color: rgb(221, 235, 255);">
+
+    <tr>
+
+<td style="vertical-align: top; text-align: center;">
+תמונה </td>
+
+      <td style="vertical-align: top; text-align: center;">
+<a href="index.php?[_GET_]&amp;orderby_news=name&amp;start_news=0&amp;desc_news=no">שם</a></td>
+
+      <td style="vertical-align: top; text-align: center;">
+<a href="index.php?[_GET_]&amp;orderby_news=category&amp;start_news=0&amp;desc_news=no">קטגוריה</a></td>
+
+      <td style="vertical-align: top; text-align: center;">
+<a href="index.php?[_GET_]&amp;orderby_news=added_by&amp;start_news=0&amp;desc_news=no">על ידי</a></td>
+
+      <td style="vertical-align: top; text-align: center;">
+<a href="index.php?[_GET_]&amp;orderby_news=add_date&amp;start_news=0&amp;desc_news=no">תאריך</a></td>
+
+    </tr>
+[START_LOOP_news]
+    <tr>
+      <td align="center" valign="top">
+<a class="nlink" href="index.php?orderby_news=name&amp;where2_news=id&amp;content=info&amp;equal_news=[[id]]"><img height="130" width="155" src='[[pic_loc]]' alt="" border="0" ></a>
+	</td>
+
+      <td align="center" valign="top"><a class="nlink" href="index.php?orderby_news=name&amp;where2_news=id&amp;content=info&amp;equal_news=[[id]]">[[name]]</a></td>
+
+      <td align="center" valign="top">
+	<!--<a href="index.php?[_GET_]&amp;where2_news=category&amp;like2_news=[[category]]&amp;start_news=0">-->[[category]]<!--</a>-->
+	</td>
+
+      <td align="center" valign="top"><!--<a href="index.php?[_GET_]&amp;where2_news=added_by&amp;like2_news=[[added_by]]&amp;start_news=0">-->[[added_by]]<!--</a>--></td>
+
+      <td align="center" valign="top">[[add_date]]</td>
+
+      
+
+    </tr>
+[END_LOOP_news]
+  </tbody>
+</table>

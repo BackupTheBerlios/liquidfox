@@ -1,0 +1,17 @@
+הוספת פורום תחת -  ~SELECT~name~forums~id~[GET_id]~name~.
+<form enctype="multipart/form-data" action="lfaction.php" method="post" id="artwork_form"
+ target="_self">
+<!-- [lfupdate] -->
+<input type="hidden" name="lfaction" value="forums|add_forum">
+<input type="hidden" value="[GET_id]" name="sub_id">
+<input type="hidden" value="[GET_fpage]" name="fpage">
+שם הפורום:
+<input name="name[POST]" style="width: 200px;"><br />
+תיאור:<br />
+<textarea cols="40" rows="5" name="desc[POST]"></textarea><!--[desc_TEXTPOST]--><br />
+תמונה:
+<input enctype="multipart/form-data" type="file" name="image" style="width: 200px;"><br />
+
+<br/>
+<br /><input value="הוסף פורום" type="submit">
+</form>

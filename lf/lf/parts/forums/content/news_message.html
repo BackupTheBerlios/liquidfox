@@ -1,0 +1,117 @@
+<table border="0" width="100%">
+<tr>
+	<td width="250" style="background: #f4f6ff;vertical-align: top">
+<div style="font-size: 28px;text-align: center;">פורומים</div>
+<div align="center"><a style="font-size: 14px;" href="index.php?content=news_forums">חזרה לפורום ראשי</a></div>
+[IF_oper]
+אפשרויות ניהול:
+<a href="index.php?content=add_forum&amp;id=[GET_equal_forums]">הוספת פורום</a><br />
+[END_IF_oper]
+[START_LOOP_news]
+<table border="1" cellpadding="3" cellspacing="0" width="99%" style="background: white;">
+	<tr>
+		<td>
+<!--
+[IF_oper]
+<div style="text-align: center;">
+ניהול:
+<a href="index.php?content=add_forum&amp;id=[[id]]">הוספת תת פורום</a> | 
+<a href="index.php?lfupdate=yes&amp;content=add_forum&amp;lfupdate_id=[[id]]">עריכה</a> | <a href="lfaction.php?lfaction=forums|del_forum&amp;delete=[[id]]">מחיקה</a>
+</div>
+[END_IF_oper]
+-->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center" style="vertical-align: top">
+		<a href="index.php?content=forums&amp;equal_forums=[[id]]" ><img style="border:0px; vertical-align: middle;" src="[[pic_loc]]" alt="" width="100" height="80"/></a>
+	</td>
+	<td align="center" style="vertical-align: middle"><div style="font-size: 22px">[[name]]</div>
+	<a href="index.php?orderby_news=name&amp;where2_news=id&amp;content=info&amp;equal_news=[[id]]" style="font-size: 12px">[דף המידע]</a></td>
+</tr>
+</table>
+		</td>	
+
+	</tr>
+</table>
+<br />
+[END_LOOP_forums]
+
+	</td>
+	<td style="vertical-align:top;">
+	<div style="text-align: center;font-size: 32px;">צפייה בשרשור</div>
+<div align="left">[IF_connected]
+<a href="index.php?table=games&amp;content=add_comment&amp;mid=[[id]]&amp;fpage=index.php::content=news_message_-_where2_news=id_-_equal_news=[[id]]">הוסף תגובה</a>
+[END_IF_connected]
+<div align="ךקכא"><a style="font-size: 14px;" href="index.php?orderby_news=name&amp;where_news=category&amp;content=news_forums_content&amp;like_news=~SELECT~category~games~id~[GET_equal_news]~id~">חזרה לפורום '~SELECT~category~games~id~[GET_equal_news]~id~'</a></div>
+
+<div style="border-style: solid; border-width: 1px;">
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+	<tr style="background: #f7f7f7;">
+		<td  width="80" align="center">
+		כינוי
+		</td>
+		<td>כותרת ההודעה</td>
+		<td  width="80" align="center">
+		שעה
+		</td>
+		<td  width="80" align="center">
+		תאריך
+		</td>
+	</tr>
+
+	<tr style="background: #f1f1f1;">
+		<td  width="80" align="center">
+		~SELECT~added_by~games~id~[GET_equal_news]~id~:
+		</td>
+		<td> ~SELECT~name~games~id~[GET_equal_news]~id~</td>
+		<td  width="80" align="center">
+		</td>
+		<td  width="80" align="center">
+		~SELECT~add_date~games~id~[GET_equal_news]~id~
+		</td>
+	</tr>
+</table>
+<div style="padding-right: 35px; padding-left: 35px;padding-top: 15px;padding-bottom: 15px;text-align: right;">
+~SELECT~desc~games~id~[GET_equal_news]~id~
+<!--[OF_cmt_owner]<div style="text-align: left;"><a href="index.php?lfupdate=yes&amp;content=add_message&amp;lfupdate_id=~SELECT~id~messages~id~[GET_equal_news]~id~">[עריכה]</a></div>[END_cmt_owner]-->
+</div>
+</div>
+<br />
+<br />
+[START_LOOP_comments_news]
+<div style="border-style: solid; border-width: 1px;">
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+	<tr style="background: #f1f1f1;">
+		<td  width="80" align="center" >
+<!--		<img src="parts/forums/images/forumsd.gif" style="vertical-align: middle" alt=""/>-->[[by]]:
+		</td>
+		<td> [[name]]</td>
+		<td  width="80" align="center">
+		</td>
+		<td  width="80" align="center">
+		[[time]]
+		</td>
+		<td  width="80" align="center">
+		[[date]]
+		</td>
+	</tr>
+</table>
+<table width="100%" border="0">
+<tr>
+<td><div style="padding-right: 35px; padding-left: 35px;padding-top: 15px;padding-bottom: 15px;text-align: right">[[comment]]</div></td> 
+<td width="128">
+</td>
+</tr>
+</table>
+<div style="padding-right: 5px; padding-left: 5px;padding-top: 5px;padding-bottom: 5px;">
+<div style="text-align: left;"><a href="index.php?lfupdate=yes&amp;content=add_comment&amp;lfupdate_id=[[id]]&amp;fpage=index.php::content=news_message_-_where2_news=id_-_equal_news=[GET_equal_news]">[IF_connected]<!-- [IF_[COOKIE_nickname]_[[by]]_own_comment] [עריכה] [END_IF_[COOKIE_nickname]_[[by]]_own_comment] -->[END_IF_connected]</a></div>
+</div>
+</div>
+<br />
+[END_LOOP_comments_news]
+</td>
+</tr>
+</table>
+[IF_connected]
+<div align="left"><a href="index.php?table=games&amp;content=add_comment&amp;mid=[[id]]&amp;fpage=index.php::content=news_message_-_where2_news=id_-_equal_news=[[id]]">הוסף תגובה</a></div>
+[END_IF_connected]

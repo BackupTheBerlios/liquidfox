@@ -1,0 +1,51 @@
+[IF_NOT_connected]
+[IF_NOT_oper]
+<form enctype="multipart/form-data" action="lfaction.php" method="post" id="artwork_form"
+ target="_self" style="margin-bottom: 0px;margin-top: 0px;">
+<input type="hidden" name="lfaction" value="news|login">
+<input type="hidden" name="fpage" value="index.php?admin=yes&content=panel">
+<br /><div style="font-size: 18px">התחברות למערכת:</div><br />
+			שם משתמש:
+			<br /><img align="middle" src='admin/images/user.gif' alt="" /> <input class="form" name="nickname" size=22 style="height: 18px;  font-size: 10px"><br />
+		
+סיסמא:<br />
+			<img align="middle" src='admin/images/pass.gif' alt="" /> <input class="form" name="password" type="password" size=22 style="height: 18px;  font-size: 10px"><br /><br />
+
+			<input class="form" type="submit" value="כניסה" style="height: 18px;  font-size: 10px">
+</form>
+[END_IF_NOT_oper]
+[END_IF_NOT_connected]
+
+[IF_connected]
+[IF_oper]
+<br />
+<div align="center" style="font-size: 28px;">Control Center</div>
+<br />
+<table width="100%" cellpadding="2" cellspacing="1" border="0" style="text-align: center;">
+	<tr>
+		<td></td>
+		<td width="100">
+			<a href="index.php?admin=yes&amp;content=users"><img src="admin/images/users.jpg"><br />
+			Users</a>
+		</td>
+		<td width="100">
+			<img src="admin/images/users.jpg"><br />
+			Users
+		</td>
+		<td width="100">
+			<img src="admin/images/users.jpg"><br />
+			Users
+		</td>
+		<td width="100">
+			<img src="admin/images/users.jpg"><br />
+			Users
+		</td>
+		<td width="100">
+			<img src="admin/images/users.jpg"><br />
+			Users
+		</td>
+	<td></td>
+	</tr>
+</table>
+[END_IF_oper]
+[END_IF_connected]
